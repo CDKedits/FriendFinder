@@ -2,6 +2,7 @@ module.exports = (sequelize, Sequelize) => {
   class User extends Sequelize.Model { }
   User.init({
     name: { type: Sequelize.STRING, allowNull: false},
+    email: { type: Sequelize.STRING, allowNull: false},
     ans1: { type: Sequelize.INTEGER, allowNull: false}, 
     ans2: { type: Sequelize.INTEGER, allowNull: false}, 
     ans3: { type: Sequelize.INTEGER, allowNull: false}, 
