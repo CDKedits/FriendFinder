@@ -8,9 +8,11 @@ app.use(express.json())
 
 require(`./routes`)(app)
 
+
+
 require(`./config`).sync()
   .then(_ => {
     console.log(`working`)
-    app.listen(3000)
+    app.listen(process.env.PORT || 3000)
   })
   .catch(e => console.log(e))
